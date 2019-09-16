@@ -11,10 +11,10 @@ export class RegistrationForm extends React.Component {
         accept: 'false',
 
         errors: {
-            username: 'true',
+            username: 'false',
             //  nie ma błędów w walidacji gdy jest false
-            email: 'true',
-            lastname: 'true',
+            email: 'false',
+            lastname: 'false',
             pass: 'false',
             accept: 'false',
 
