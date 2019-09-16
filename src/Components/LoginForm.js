@@ -6,8 +6,7 @@ export class LoginForm extends React.Component {
         return (
             <div className="loginForm">
 
-                <form >
-
+                <form>
                     <label htmlFor="username">Username<input type="text" id="username" name="username" />
                     </label>
                 </form>

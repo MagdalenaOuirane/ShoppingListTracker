@@ -91,6 +91,7 @@ export class RegistrationForm extends React.Component {
                     </label>
 
                     <label htmlFor="password">Password<input type="password" id="paswords" name="pass" value={this.state.pass} onChange={this.handleChange} />
+                        {this.state.errors && <span>{this.messages.password}</span>}
 
 
                     </label>
