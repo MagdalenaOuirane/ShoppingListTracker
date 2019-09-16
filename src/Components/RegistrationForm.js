@@ -96,7 +96,7 @@ export class RegistrationForm extends React.Component {
 
                     </label>
 
-                    <label htmlFor="accept"><input type="checkbox" id="accept" name="accept" checked={this.state.accept} onChange={this.handleChange} />You agree to the website User Agreement,Privacy Policy and Cookie policy</label>
+                    <label htmlFor="accept"><input type="checkbox" id="accept" name="accept" checked={this.state.accept} onChange={this.handleChange} />{this.state.errors && <span>{this.messages.accept_incorrect}</span>}You agree to the website User Agreement,Privacy Policy and Cookie policy</label>
 
 
                     <button >JOIN</button>
