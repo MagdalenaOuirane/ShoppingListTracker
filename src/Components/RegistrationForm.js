@@ -12,7 +12,7 @@ export class RegistrationForm extends React.Component {
 
         errors: {
             username: 'false',
-            //  nie ma błędów w walidacji gdy jest false
+            //  there are no mistakes in validation if its false 
             email: 'false',
             lastname: 'false',
             pass: 'false',
@@ -67,7 +67,35 @@ export class RegistrationForm extends React.Component {
 
     handleSubmit = (e) => {
         e.preventDefault()
-        console.log("działa");
+        console.log("It's working");
+        if (true) {
+            //validation is ok
+            this.setState({
+                username: '',
+                email: '',
+                lastname: '',
+                pass: '',
+                accept: 'false',
+
+                errors: {
+                    username: false,
+                    email: false,
+                    lastname: false,
+                    pass: false,
+                    accept: false,
+                }
+            })
+        } else {
+            this.setState({
+                errors: {
+                    username: false,
+                    email: false,
+                    lastname: false,
+                    pass: false,
+                    accept: false,
+                }
+            })
+        }
     }
 
 
