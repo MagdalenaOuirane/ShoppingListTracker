@@ -68,8 +68,13 @@ export class RegistrationForm extends React.Component {
     handleSubmit = (e) => {
         e.preventDefault()
         console.log("It's working");
-        if (true) {
-            //validation is ok
+
+        const validation = this.formValidation()
+        // console.log(validation);
+
+
+        if (validation.correct) {
+
             this.setState({
                 username: '',
                 email: '',
@@ -85,19 +90,65 @@ export class RegistrationForm extends React.Component {
                     accept: false,
                 }
             })
+            console.log("Form sent");
         } else {
             this.setState({
                 errors: {
-                    username: false,
-                    email: false,
-                    lastname: false,
-                    pass: false,
-                    accept: false,
+                    username: !validation.username,
+                    email: !validation.email,
+                    lastname: !validation.lastname,
+                    pass: !validation.password,
+                    accept: !validation.accept
                 }
             })
         }
     }
 
+    formValidation = () => {
+        //true - ok
+        //false - wrong
+        let username = false;
+        let lastname = false;
+        let email = false;
+        let password = false;
+        let accept = false;
+        let correct = false;
+
+        if (this.state.username.length > 10 &&
+            this.state.username.indexOf(' ') === -1) { // if there is not space return -1
+            username = true;
+        }
+
+        if (this.state.lastname.length > 10 &&
+            this.state.lastname.indexOf(' ') === -1) {
+            lastname = true;
+        }
+
+        if (this.state.email.indexOf('@') !== -1) {
+            email = true;
+        }
+
+        if (this.state.pass.length === 8) {
+            password = true;
+        }
+
+        if (this.state.accept) {
+            accept = true
+        }
+
+        if (username && lastname && email && password && accept) {
+            correct = true
+        }
+
+        return ({
+            username,
+            lastname,
+            email,
+            password,
+            accept,
+            correct
+        })
+    }
 
     render() {
         return (
