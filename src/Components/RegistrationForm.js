@@ -178,7 +178,7 @@ export class RegistrationForm extends React.Component {
                     <label htmlFor="accept"><input type="checkbox" id="accept" name="accept" checked={this.state.accept} onChange={this.handleChange} />You agree to the website User Agreement,Privacy Policy and Cookie policy</label>
 
                     {this.state.errors && <span>{this.messages.accept_incorrect}</span>}
-                    <button >JOIN</button>
+                    <button >AGREE & JOIN</button>
 
                 </form>
 
