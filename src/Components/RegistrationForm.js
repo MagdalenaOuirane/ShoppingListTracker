@@ -8,7 +8,7 @@ export class RegistrationForm extends React.Component {
         email: '',
         lastname: '',
         pass: '',
-        accept: 'false',
+
 
         errors: {
             username: 'false',
@@ -16,10 +16,7 @@ export class RegistrationForm extends React.Component {
             email: 'false',
             lastname: 'false',
             pass: 'false',
-            accept: 'false',
-
         }
-
     }
     // Validation
     messages = {
@@ -27,7 +24,7 @@ export class RegistrationForm extends React.Component {
         lastname_incorrect: 'Last Name must be longer than 2 characters and it cant have space',
         email_incorrect: 'Lack of @ in email',
         password: 'Password has to have at least 8 characters',
-        accept_incorrect: 'Agreement is not confirmed'
+
     }
 
 
@@ -49,20 +46,11 @@ export class RegistrationForm extends React.Component {
             this.setState({
                 [name]: value
             })
-        } else if (type === "checkbox") {
-            const checked = e.target.checked;
-            console.log(checked);
-            this.setState({
-                [name]: checked
-            })
-
-
-
         }
     }
     // console.log("type");
 
-    // const checked = e.target.checked;
+
 
 
     handleSubmit = (e) => {
@@ -80,14 +68,13 @@ export class RegistrationForm extends React.Component {
                 email: '',
                 lastname: '',
                 pass: '',
-                accept: 'false',
+
 
                 errors: {
                     username: false,
                     email: false,
                     lastname: false,
                     pass: false,
-                    accept: false,
                 }
             })
             console.log("Form sent");
@@ -98,7 +85,7 @@ export class RegistrationForm extends React.Component {
                     email: !validation.email,
                     lastname: !validation.lastname,
                     pass: !validation.password,
-                    accept: !validation.accept
+
                 }
             })
         }
@@ -111,7 +98,6 @@ export class RegistrationForm extends React.Component {
         let lastname = false;
         let email = false;
         let password = false;
-        let accept = false;
         let correct = false;
 
         if (this.state.username.length > 10 &&
@@ -132,11 +118,7 @@ export class RegistrationForm extends React.Component {
             password = true;
         }
 
-        if (this.state.accept) {
-            accept = true
-        }
-
-        if (username && lastname && email && password && accept) {
+        if (username && lastname && email && password) {
             correct = true
         }
 
@@ -145,7 +127,6 @@ export class RegistrationForm extends React.Component {
             lastname,
             email,
             password,
-            accept,
             correct
         })
     }
@@ -175,10 +156,10 @@ export class RegistrationForm extends React.Component {
 
                     </label>
 
-                    <label htmlFor="accept"><input type="checkbox" id="accept" name="accept" checked={this.state.accept} onChange={this.handleChange} />You agree to the website User Agreement,Privacy Policy and Cookie policy</label>
+                    <p class="text">You agree to the website User Agreement, Privacy policy and Cookie policy</p>
 
-                    {this.state.errors && <span>{this.messages.accept_incorrect}</span>}
-                    <button >AGREE & JOIN</button>
+
+                    <button>AGREE & JOIN</button>
 
                 </form>
 
