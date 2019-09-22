@@ -9,6 +9,21 @@ export class LoginForm extends React.Component {
     }
 
 
+    handleChange = (e) => {
+        console.log(e.target.type);
+        console.log(e.target.name);
+
+        const name = e.target.value;
+        // downloading value - name
+        const value = e.target.value;
+        this.setState({
+            [name]: value
+        })
+    }
+
+
+
+
     render() {
         return (
             <div className="container-for-login">
@@ -17,7 +32,7 @@ export class LoginForm extends React.Component {
                     <label htmlFor="email">Email<input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
                     </label>
 
-                    <label htmlFor="password">Password<input type="password" id="password" value={this.state.password} on Change={this.handleChange} /></label>
+                    <label htmlFor="password">Password<input type="password" id="password" name="password" value={this.state.password} on Change={this.handleChange} /></label>
 
 
                     <button>Sign in</button>
