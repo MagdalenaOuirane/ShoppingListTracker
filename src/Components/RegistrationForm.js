@@ -141,7 +141,7 @@ export class RegistrationForm extends React.Component {
                         {this.state.errors && <span>{this.messages.username_incorrect}</span>}
                     </label>
 
-                    <label htmlFor="lastname">Last name<input type="text" id="lastname" name="lastname" value={this.state.name} onChange={this.handleChange} />
+                    <label htmlFor="lastname">Last name<input type="text" id="lastname" name="lastname" value={this.state.lastname} onChange={this.handleChange} />
                         {this.state.errors && <span>{this.messages.lastname_incorrect}</span>}
                     </label>
 
@@ -150,7 +150,7 @@ export class RegistrationForm extends React.Component {
                         {this.state.errors && <span>{this.messages.email_incorrect}</span>}
                     </label>
 
-                    <label htmlFor="password">Password<input type="password" id="paswords" name="pass" value={this.state.pass} onChange={this.handleChange} />
+                    <label htmlFor="password">Password<input type="password" id="password" name="pass" value={this.state.pass} onChange={this.handleChange} />
                         {this.state.errors && <span>{this.messages.password}</span>}
 
 
