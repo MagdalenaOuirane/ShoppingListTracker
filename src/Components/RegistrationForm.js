@@ -135,7 +135,7 @@ export class RegistrationForm extends React.Component {
         return (
             <div className="app">
                 <form className="myForm" onSubmit={this.handleSubmit} noValidate>
-
+                    <p className="registration-form">Registration Form</p>
                     <label htmlFor="user">First name<input type="text" id="user" name="username" value={this.state.username} onChange={this.handleChange} />
                         {/* checking fields if are correct or not */}
                         {this.state.errors && <span>{this.messages.username_incorrect}</span>}
