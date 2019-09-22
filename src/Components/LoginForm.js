@@ -14,11 +14,25 @@ export class LoginForm extends React.Component {
         console.log(e.target.name);
 
         const name = e.target.value;
-        // downloading value - name
+        // downloading value - 
+        const type = e.target.type;
         const value = e.target.value;
-        this.setState({
-            [name]: value
-        })
+
+        if (type === 'password' || type === 'email') {
+            const value = e.target.value;
+
+            this.setState({
+                [name]: value
+            })
+        }
+    }
+
+
+
+
+    handleSubmit = (e) => {
+        e.preventDefault()
+        console.log('works');
     }
 
 
@@ -28,7 +42,7 @@ export class LoginForm extends React.Component {
         return (
             <div className="container-for-login">
 
-                <form className="loginForm">
+                <form className="loginForm" onSubmit={this.handleSubmit} noValidate>
                     <label htmlFor="email">Email<input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
                     </label>
 
