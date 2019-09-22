@@ -40,15 +40,16 @@ export class RegistrationForm extends React.Component {
 
 
         if (type === "text" || type === "password" || type === "email") {
+
+
             const value = e.target.value;
-            console.log("type");
 
             this.setState({
                 [name]: value
             })
         }
     }
-    // console.log("type");
+
 
 
 
@@ -134,7 +135,7 @@ export class RegistrationForm extends React.Component {
     render() {
         return (
             <div className="app">
-                <form className="myForm" onSubmit={this.handleSubmit} noValidate>
+                <form className="myForm" onSubmit={this.handleSubmit} noValidate >
                     <p className="registration-form">Registration Form</p>
                     <label htmlFor="user">First name<input type="text" id="user" name="username" value={this.state.username} onChange={this.handleChange} />
                         {/* checking fields if are correct or not */}
