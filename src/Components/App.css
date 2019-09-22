@@ -48,3 +48,11 @@ span {
   color:red;
   margin-left:2px;
 }
+
+.text {
+  text-align:center;
+}
+
+.sign-in-link {
+  text-align:center;
+}
