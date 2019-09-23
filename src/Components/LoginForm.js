@@ -25,7 +25,7 @@ export class LoginForm extends React.Component {
         console.log(e.target.name);
 
         const name = e.target.value;
-        // downloading value - 
+        // downloading value  
         const type = e.target.type;
         const value = e.target.value;
 
