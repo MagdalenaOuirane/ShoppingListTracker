@@ -23,7 +23,7 @@ export class RegistrationForm extends React.Component {
         username_incorrect: 'Name must be longer than 3 characters and it cant have space',
         lastname_incorrect: 'Last Name must be longer than 2 characters and it cant have space',
         email_incorrect: 'Lack of @ in email',
-        password: 'Password has to have at least 8 characters',
+        password: 'Password has to have at least 5 characters',
 
     }
 
@@ -78,7 +78,7 @@ export class RegistrationForm extends React.Component {
                     pass: false,
                 }
             })
-            console.log("Form sent");
+            console.log("Form has been sent");
         } else {
             this.setState({
                 errors: {

@@ -6,6 +6,17 @@ export class LoginForm extends React.Component {
     state = {
         email: '',
         password: '',
+
+
+        errors: {
+            email: 'false',
+            password: 'false',
+        }
+    }
+
+    messages = {
+        email_incorrect: 'Lack of @ in email',
+        password: 'Password has to have at least 5 characters',
     }
 
 
@@ -44,9 +55,11 @@ export class LoginForm extends React.Component {
 
                 <form className="loginForm" onSubmit={this.handleSubmit} noValidate>
                     <label htmlFor="email">Email<input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
+                        {this.state.errors && <span>{this.messages.email_incorrect}</span>}
                     </label>
 
-                    <label htmlFor="password">Password<input type="password" id="password" name="password" value={this.state.password} on Change={this.handleChange} /></label>
+                    <label htmlFor="password">Password<input type="password" id="password" name="password" value={this.state.password} on Change={this.handleChange} /> {this.state.errors && <span>{this.messages.password}</span>}
+                    </label>
 
 
                     <button>Sign in</button>
