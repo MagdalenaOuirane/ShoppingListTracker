@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 export class LoginForm extends React.Component {
 
 
@@ -44,10 +45,63 @@ export class LoginForm extends React.Component {
     handleSubmit = (e) => {
         e.preventDefault()
         console.log('works');
+
+        const validateData = this.formValidation()
+        // function which is checking if validation is correct or not and returns us this information
+
+        // console.log(validateData);
+
+
+        if (validateData.correct) {
+            //  if validation is correct by pressing button it returns me an object)
+
+            this.setState({
+                email: '',
+                password: '',
+
+                errors: {
+                    email: false,
+                    password: false,
+                }
+            })
+            console.log("Form has been sent");
+        } else {
+            this.setState({
+                errors: {
+                    email: !validateData.email,
+                    password: !validateData.password,
+                }
+            })
+        }
     }
 
+    formValidation = () => {
+        let email = false;
+        let password = false;
+        let correct = false;
+        //checks if all form is correct
 
 
+        if (this.state.email.indexOf('@') !== -1) {
+            email = true;
+        }
+
+        if (this.state.password.length === 5) {
+            password = true;
+
+        }
+
+        if (email && password) {
+            correct = true
+        }
+
+        return ({
+            email,
+            password,
+        })
+
+
+    }
 
     render() {
         return (

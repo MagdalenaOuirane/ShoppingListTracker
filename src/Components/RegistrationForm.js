@@ -21,7 +21,7 @@ export class RegistrationForm extends React.Component {
     // Validation
     messages = {
         username_incorrect: 'Name must be longer than 3 characters and it cant have space',
-        lastname_incorrect: 'Last Name must be longer than 2 characters and it cant have space',
+        lastname_incorrect: 'Last Name must be longer than 3 characters and it cant have space',
         email_incorrect: 'Lack of @ in email',
         password: 'Password has to have at least 5 characters',
 
@@ -101,12 +101,12 @@ export class RegistrationForm extends React.Component {
         let password = false;
         let correct = false;
 
-        if (this.state.username.length > 10 &&
+        if (this.state.username.length > 3 &&
             this.state.username.indexOf(' ') === -1) { // if there is not space return -1
             username = true;
         }
 
-        if (this.state.lastname.length > 10 &&
+        if (this.state.lastname.length > 3 &&
             this.state.lastname.indexOf(' ') === -1) {
             lastname = true;
         }
@@ -115,7 +115,7 @@ export class RegistrationForm extends React.Component {
             email = true;
         }
 
-        if (this.state.pass.length === 8) {
+        if (this.state.pass.length === 5) {
             password = true;
         }
 
