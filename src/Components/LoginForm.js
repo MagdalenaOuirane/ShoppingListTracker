@@ -10,8 +10,8 @@ export class LoginForm extends React.Component {
 
 
         errors: {
-            email: 'false',
-            password: 'false',
+            email: false,
+            password: false,
         }
     }
 
@@ -28,7 +28,7 @@ export class LoginForm extends React.Component {
         const name = e.target.value;
         // downloading value  
         const type = e.target.type;
-        const value = e.target.value;
+
 
         if (type === 'password' || type === 'email') {
             const value = e.target.value;
@@ -86,7 +86,7 @@ export class LoginForm extends React.Component {
             email = true;
         }
 
-        if (this.state.password.length === 5) {
+        if (this.state.password.length >= 5) {
             password = true;
 
         }
@@ -98,6 +98,7 @@ export class LoginForm extends React.Component {
         return ({
             email,
             password,
+            correct
         })
 
 
@@ -109,10 +110,10 @@ export class LoginForm extends React.Component {
 
                 <form className="loginForm" onSubmit={this.handleSubmit} noValidate>
                     <label htmlFor="email">Email<input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
-                        {this.state.errors && <span>{this.messages.email_incorrect}</span>}
+                        {this.state.errors.email && <span>{this.messages.email_incorrect}</span>}
                     </label>
 
-                    <label htmlFor="password">Password<input type="password" id="password" name="password" value={this.state.password} on Change={this.handleChange} /> {this.state.errors && <span>{this.messages.password}</span>}
+                    <label htmlFor="password">Password<input type="password" id="password" name="password" value={this.state.password} on Change={this.handleChange} /> {this.state.errors.password && <span>{this.messages.password}</span>}
                     </label>
 
 
