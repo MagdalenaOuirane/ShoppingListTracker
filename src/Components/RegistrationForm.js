@@ -11,11 +11,11 @@ export class RegistrationForm extends React.Component {
 
 
         errors: {
-            username: 'false',
+            username: false,
             //  there are no mistakes in validation if its false 
-            email: 'false',
-            lastname: 'false',
-            pass: 'false',
+            email: false,
+            lastname: false,
+            pass: false,
         }
     }
     // Validation
@@ -115,7 +115,7 @@ export class RegistrationForm extends React.Component {
             email = true;
         }
 
-        if (this.state.pass.length === 5) {
+        if (this.state.pass.length >= 5) {
             password = true;
         }
 
@@ -139,20 +139,20 @@ export class RegistrationForm extends React.Component {
                     <p className="registration-form">Registration Form</p>
                     <label htmlFor="user">First name<input type="text" id="user" name="username" value={this.state.username} onChange={this.handleChange} />
                         {/* checking fields if are correct or not */}
-                        {this.state.errors && <span>{this.messages.username_incorrect}</span>}
+                        {this.state.errors.username && <span>{this.messages.username_incorrect}</span>}
                     </label>
 
                     <label htmlFor="lastname">Last name<input type="text" id="lastname" name="lastname" value={this.state.lastname} onChange={this.handleChange} />
-                        {this.state.errors && <span>{this.messages.lastname_incorrect}</span>}
+                        {this.state.errors.lastname && <span>{this.messages.lastname_incorrect}</span>}
                     </label>
 
 
                     <label htmlFor="email">Email<input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
-                        {this.state.errors && <span>{this.messages.email_incorrect}</span>}
+                        {this.state.errors.email && <span>{this.messages.email_incorrect}</span>}
                     </label>
 
                     <label htmlFor="password">Password<input type="password" id="password" name="pass" value={this.state.pass} onChange={this.handleChange} />
-                        {this.state.errors && <span>{this.messages.password}</span>}
+                        {this.state.errors.pass && <span>{this.messages.password}</span>}
 
 
                     </label>
