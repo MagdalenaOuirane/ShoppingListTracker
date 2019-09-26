@@ -8,6 +8,7 @@ export class RegistrationForm extends React.Component {
         email: '',
         lastname: '',
         pass: '',
+        message: '',
 
 
         errors: {
@@ -69,6 +70,7 @@ export class RegistrationForm extends React.Component {
                 email: '',
                 lastname: '',
                 pass: '',
+                message: 'Form has been sent',
 
 
                 errors: {
@@ -78,7 +80,7 @@ export class RegistrationForm extends React.Component {
                     pass: false,
                 }
             })
-            console.log("Form has been sent");
+            // console.log("Form has been sent");
         } else {
             this.setState({
                 errors: {
@@ -164,7 +166,7 @@ export class RegistrationForm extends React.Component {
                     <p className="sign-in-link">Already on this page? Sign in</p>
 
                 </form>
-
+                {this.state.message && <h3>{this.state.message}</h3>}
             </div>
         );
     }
