@@ -55,7 +55,7 @@
     text-align:center;
   }
   
-  .sign-in-link {
+  .sign-in-link, .statement {
     text-align:center;
   }
 
@@ -63,3 +63,5 @@
 text-align:center;
 font-weight: bold;
   }
+
+  
