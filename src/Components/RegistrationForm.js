@@ -134,6 +134,14 @@ export class RegistrationForm extends React.Component {
         })
     }
 
+    componentDidUpdate() {
+        if (this.state.message !== '') {
+            setTimeout(() => this.setState({
+                message: ''
+            }), 3000)
+        }
+    }
+
     render() {
         return (
             <div className="app">
@@ -166,7 +174,7 @@ export class RegistrationForm extends React.Component {
                     <p className="sign-in-link">Already on this page? Sign in</p>
 
                 </form>
-                {this.state.message && <h3>{this.state.message}</h3>}
+                {this.state.message && <h3 class="statement">{this.state.message}</h3>}
             </div>
         );
     }
