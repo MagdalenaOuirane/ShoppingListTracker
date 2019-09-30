@@ -4,6 +4,7 @@ import { RegistrationForm } from './RegistrationForm';
 import './RegistrationForm.css';
 import LoginForm from './LoginForm';
 import './LoginForm.css';
+import Notfound from './Notfound';
 import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
 
 
@@ -12,9 +13,18 @@ class App extends React.Component {
     return (
       <Router>
         <div>
+          <nav>
+            <ul>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/registrationform"> RegistrationForm</Link></li>
 
+            </ul>
+          </nav>
+          {/* <Switch> */}
+          <Route path="/" component={LoginForm} />
           <Route path="/registrationform" component={RegistrationForm} />
-          <Route path="/loginform" component={LoginForm} />
+          <Route path="/notfound" component={Notfound} />
+          {/* </Switch> */}
 
         </div>
       </Router>
