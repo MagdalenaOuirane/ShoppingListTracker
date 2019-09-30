@@ -1,7 +1,7 @@
 .myForm {
     margin:80px auto;
     background-color: rgb(214, 208, 208);
-    max-width: 500px;
+    max-width: 600px;
    font-family:sans-serif;
     border:1px solid black;
   }
@@ -17,7 +17,8 @@
   input[type="password"] {
     display:block;
     font-family:sans-serif;
-    padding:5px 165px;
+    padding:5px 15px;
+    width:90%;
     margin-left:2px;
     border: 1px solid black;
     margin-top:5px;
@@ -29,7 +30,7 @@
      max-width:300px;
     padding: 10px 80px;
     margin-top:20px;
-    margin-left: 125px;
+    margin-left: 170px;
     margin-bottom:10px;
     font-weight:bold;
     color:white;
