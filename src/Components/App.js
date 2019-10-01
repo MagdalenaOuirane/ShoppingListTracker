@@ -13,13 +13,6 @@ class App extends React.Component {
     return (
       <Router>
         <div>
-          <nav>
-            <ul>
-              <li><Link to="/">Home</Link></li>
-              <li><Link to="/registrationform"> RegistrationForm</Link></li>
-
-            </ul>
-          </nav>
           <Switch>
             <Route exact path="/" component={LoginForm} />
             <Route path="/registrationform" component={RegistrationForm} />

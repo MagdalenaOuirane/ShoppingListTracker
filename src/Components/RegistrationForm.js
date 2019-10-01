@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 
 export class RegistrationForm extends React.Component {
@@ -171,7 +172,7 @@ export class RegistrationForm extends React.Component {
 
 
                     <button>AGREE & JOIN</button>
-                    <p className="sign-in-link">Already on this page?<a href="http://localhost:3000">Sign in</a></p>
+                    <p className="sign-in-link">Already on this page? <Link to="/"> Sign in</Link></p>
 
                 </form>
                 {this.state.message && <h3 class="statement">{this.state.message}</h3>}

@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 
 export class LoginForm extends React.Component {
 
@@ -121,7 +121,7 @@ export class LoginForm extends React.Component {
 
                     <p className="password">Forgot password?</p>
 
-                    <p className="web">New to this website? <a href="http://localhost:3000/registrationform" >Join now</a></p>
+                    <p className="web">New to this website? <Link to="/registrationform">Join now</Link></p>
                 </form>
 
             </div>
