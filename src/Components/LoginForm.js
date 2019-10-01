@@ -121,7 +121,7 @@ export class LoginForm extends React.Component {
 
                     <p className="password">Forgot password?</p>
 
-                    <p className="web">New to this website? Join now</p>
+                    <p className="web">New to this website? <a href="http://localhost:3000/registrationform" >Join now</a></p>
                 </form>
 
             </div>

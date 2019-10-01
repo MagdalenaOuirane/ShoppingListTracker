@@ -171,7 +171,7 @@ export class RegistrationForm extends React.Component {
 
 
                     <button>AGREE & JOIN</button>
-                    <p className="sign-in-link">Already on this page? Sign in</p>
+                    <p className="sign-in-link">Already on this page?<a href="http://localhost:3000">Sign in</a></p>
 
                 </form>
                 {this.state.message && <h3 class="statement">{this.state.message}</h3>}

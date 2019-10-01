@@ -5,7 +5,7 @@ import './RegistrationForm.css';
 import LoginForm from './LoginForm';
 import './LoginForm.css';
 import Notfound from './Notfound';
-import { BrowserRouter as Router, Link, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 
 
 class App extends React.Component {
@@ -20,11 +20,11 @@ class App extends React.Component {
 
             </ul>
           </nav>
-          {/* <Switch> */}
-          <Route path="/" component={LoginForm} />
-          <Route path="/registrationform" component={RegistrationForm} />
-          <Route path="/notfound" component={Notfound} />
-          {/* </Switch> */}
+          <Switch>
+            <Route exact path="/" component={LoginForm} />
+            <Route path="/registrationform" component={RegistrationForm} />
+            <Route component={Notfound} />
+          </Switch>
 
         </div>
       </Router>

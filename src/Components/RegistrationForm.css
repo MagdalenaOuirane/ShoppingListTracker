@@ -30,7 +30,7 @@
      max-width:300px;
     padding: 10px 80px;
     margin-top:20px;
-    margin-left: 170px;
+    margin-left: 50px;
     margin-bottom:10px;
     font-weight:bold;
     color:white;
@@ -63,6 +63,10 @@
   .registration-form {
 text-align:center;
 font-weight: bold;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   
