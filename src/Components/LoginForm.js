@@ -106,7 +106,7 @@ export class LoginForm extends React.Component {
 
     render() {
         return (
-            <div className="container-for-login">
+            <div className="container-login">
 
                 <form className="loginForm" onSubmit={this.handleSubmit} noValidate>
                     <label htmlFor="email">Email<input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
