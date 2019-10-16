@@ -1,7 +1,18 @@
+
+.container-login {
+display:flex;
+justify-content:center;
+margin-top:50px;
+}
+
+
 .loginForm {
-    margin:80px auto;
+  display:flex;
+  flex-direction:column;
+  flex-basis: 500px;
+    /* margin:80px auto; */
     background-color:rgb(214, 208, 208);
-    max-width: 500px;
+    /* max-width: 600px; */
    font-family:sans-serif;
     border:1px solid black;
   }
@@ -11,7 +22,7 @@ text-align:center;
 }
 
 button {
-  margin-left: 150px;
+  margin: 25px auto;
 }
 
 .loginForm button:hover {
