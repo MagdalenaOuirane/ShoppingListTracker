@@ -1,0 +1,14 @@
+div {
+    text-align:center;
+}
+
+img {
+    width:800px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+button {
+    background-color:gray;
+}

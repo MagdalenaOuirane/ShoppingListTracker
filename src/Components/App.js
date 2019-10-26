@@ -5,6 +5,7 @@ import './RegistrationForm.css';
 import LoginForm from './LoginForm';
 import './LoginForm.css';
 import Notfound from './Notfound';
+import './Notfound.css';
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
 
 
