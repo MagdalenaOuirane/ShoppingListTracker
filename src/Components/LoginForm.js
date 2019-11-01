@@ -106,25 +106,107 @@ export class LoginForm extends React.Component {
 
     render() {
         return (
+
             <div className="container-login">
 
-                <form className="loginForm" onSubmit={this.handleSubmit} noValidate>
-                    <label htmlFor="email">Email<input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
-                        {this.state.errors.email && <span>{this.messages.email_incorrect}</span>}
-                    </label>
+                <div id="loginbox"  >
+                    <div className="panel-info">
+                        <div className="panel-heading">
+                            <div className="panel-title">Sign In</div>
+                            <div className="f-pass">Forgot password?</div>
+                        </div>
 
-                    <label htmlFor="password">Password<input type="password" id="password" name="password" value={this.state.password} on Change={this.handleChange} /> {this.state.errors.password && <span>{this.messages.password}</span>}
-                    </label>
+                        <div className="panel-body">
+
+                            <div id="login-alert" className="alert alert-danger col-sm-12"></div>
 
 
-                    <button>Sign in</button>
+                            <form id="loginForm" className="form-horizontal" on Submit={this.handleSubmit} noValidate>
 
-                    <p className="password">Forgot password?</p>
+                                <div className="input-group">
 
-                    <p className="web">New to this website? <Link to="/registrationform">Join now</Link></p>
-                </form>
+
+                                    <label htmlFor="email">Email <input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} placeholder="email" />
+                                        {this.state.errors.email && <span>{this.messages.email_incorrect}</span>}
+                                    </label>
+                                </div>
+
+                                <div className="input-group">
+
+
+                                    <label htmlFor="password">Password<input type="password" id="password" name="password" value={this.state.password} on Change={this.handleChange} placeholder="password" /> {this.state.errors.password && <span>{this.messages.password}</span>}
+
+                                    </label>
+                                </div>
+
+
+
+
+                                <div className="form-group">
+                                    {/* button */}
+
+                                    <div className="col-sm-12 controls">
+                                        <button>Login</button>
+                                    </div>
+                                </div>
+
+
+                                <div className="form-group">
+                                    <div className="col-md-12 control">
+                                        <div className="form-account">
+                                            <p className="web">Don't have an account? <Link to="/registrationform">Sign up here</Link></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
 
             </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         )
     }
 }
