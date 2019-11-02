@@ -109,7 +109,7 @@ export class LoginForm extends React.Component {
 
             <div className="container-login">
 
-                <div id="loginbox"  >
+                <div id="loginbox" >
                     <div className="panel-info">
                         <div className="panel-heading">
                             <div className="panel-title">Sign In</div>
