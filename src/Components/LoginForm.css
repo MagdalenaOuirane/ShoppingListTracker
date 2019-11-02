@@ -1,31 +1,62 @@
+#loginbox {
+  margin-top:50px;
+border:1px solid lightskyblue;
 
-.container-login {
-position:absolute;
-top:50%;
-left:50%;
-transform:translate(-50%,-50%);
 }
 
+.panel-info {
+width:400px;
+}
 
-.loginForm {
+.panel-title {
   display:flex;
-  flex-direction:column;
-  width: 500px;
-  flex-shrink:1;
-   background-color:rgb(214, 208, 208);
-  font-family:sans-serif;
-   border:1px solid black;
-  }
-
-.password,.web {
-text-align:center;
+  flex-direction:row;
+  font-size:25px;
 }
 
-button {
-  margin: 25px auto;
+.f-pass {
+  float:right;
+  font-size:70%;
+  position:relative;
+  top:-10px;
+
 }
 
-.loginForm button:hover {
-  background-color: rgb(58, 125, 224);
-    } 
 
+
+#login-alert {
+  display:none;
+}
+
+.input-group {
+  margin-bottom:30px;
+  width:100%;
+}
+
+.form-group {
+  margin-top:10px;
+}
+
+.form-account {
+  border-top:1px solid #888;
+  padding-top:15px;
+  font-size:85%;
+
+}
+
+
+ .input-group {
+   width:100%;
+ }
+
+ .input-group label {
+   text-align: left;
+ }
+
+
+.form-group .col-sm-12 button {
+  text-align:center;
+  padding:10px 80px;
+  background-color:#31708f;
+ 
+}
