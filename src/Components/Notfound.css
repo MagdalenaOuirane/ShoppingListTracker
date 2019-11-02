@@ -9,7 +9,8 @@ img {
     align-items:center;
 }
 
-button {
+ div .btn-home {
     background-color:gray;
     color:white;
+    padding: 10px 50px;
 }
