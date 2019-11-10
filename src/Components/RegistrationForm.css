@@ -1,86 +1,82 @@
-
-
 body {
-  height:100vh;
   display:flex;
   flex-direction:row;
   justify-content:center;
   align-items:center;
 }
 
-.myForm {
-  display:flex;
-  flex-direction:column;
-  flex-shrink:1;
-   background-color: rgb(214, 208, 208);
-    max-width: 600px;
-   font-family:sans-serif;
-    border:1px solid black;
-  }
+#signupbox {
+margin-top:50px;
+  border:1px solid lightskyblue;
   
-  label {
-    display:block;
-    margin-top:30px;
-    font-size:20px;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
-    display:block;
-    font-family:sans-serif;
-    padding:5px 15px;
-    width:90%;
-    margin-left:2px;
-    border: 1px solid black;
-    margin-top:5px;
-  
-  
-  }
-  
-  button {
-     max-width:300px;
-    padding: 10px 80px;
-    margin-top:20px;
-    margin-left: 250px;
-    margin-bottom:10px;
-    font-weight:bold;
-    color:white;
-    background-color:rgb(8, 8, 133);
-    cursor:pointer;
-    border-radius:5px;
-    transition:0,3s;
-  }
-  
-   .myForm button:hover {
-  background-color: rgb(58, 125, 224);
+}
+
+.panel-info {
+  width:400px;
+}
+
+.sign-in {
+  float:right;
+  font-size:80%;
+  position:relative;
+  top:-10px;
+}
+
+#login-alert {
+  display:none;
+}
+ .myForm {
+    display:flex;
+    flex-direction:column;
+    flex-shrink:1;
+    
+}
+    
+    label {
+      text-align:left;
+      
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+   margin-bottom:30px;
+    width:100%;
+    
+    }
+    
+    button {
+     padding:10px 80px;
+      color:white; 
+      text-align:center;
+      background-color:#31708f;
+      cursor:pointer;
+      border-radius:5px;
+      transition:0,3s;
+    }
+    
+     .myForm button:hover {
+    background-color: rgb(58, 125, 224);
+      }
+     span {
+      font-size: 15px;
+      color:red;
+      margin-left:2px;
+    }
+    
+    .text {
+      text-align:center;
+    }
+    
+   .statement {
+      text-align:center;
     }
   
+    .registration-form {
+  text-align:center;
+  font-weight: bold;
+    }
   
+    
   
-  span {
-    font-size: 15px;
-    color:red;
-    margin-left:2px;
-  }
-  
-  .text {
-    text-align:center;
-  }
-  
-  .sign-in-link, .statement {
-    text-align:center;
-  }
-
-  .registration-form {
-text-align:center;
-font-weight: bold;
-  }
-
-  a {
-    text-decoration: none;
-  }
-
-
-
-  
+   
