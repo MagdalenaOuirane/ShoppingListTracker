@@ -146,40 +146,63 @@ export class RegistrationForm extends React.Component {
     render() {
         return (
             <div className="app">
-                <form className="myForm" onSubmit={this.handleSubmit} noValidate >
-                    <p className="registration-form">Registration Form</p>
-                    <label htmlFor="user">First name<input type="text" id="user" name="username" value={this.state.username} onChange={this.handleChange} />
-                        {/* checking fields if are correct or not */}
-                        {this.state.errors.username && <span>{this.messages.username_incorrect}</span>}
-                    </label>
 
-                    <label htmlFor="lastname">Last name<input type="text" id="lastname" name="lastname" value={this.state.lastname} onChange={this.handleChange} />
-                        {this.state.errors.lastname && <span>{this.messages.lastname_incorrect}</span>}
-                    </label>
+                <div id="signupbox" >
+                    <div className="panel-info">
+                        <div className="panel-heading">
+                            <div className="panel-title">Sign Up</div>
+                            <div className="sign-in"><Link to="/"> Sign in</Link></div>
+                        </div>
 
+                        <div className="panel-body">
 
-                    <label htmlFor="email">Email<input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
-                        {this.state.errors.email && <span>{this.messages.email_incorrect}</span>}
-                    </label>
-
-                    <label htmlFor="password">Password<input type="password" id="password" name="pass" value={this.state.pass} onChange={this.handleChange} />
-                        {this.state.errors.pass && <span>{this.messages.password}</span>}
+                            <div id="login-alert" className="alert alert-danger col-sm-12"></div>
 
 
-                    </label>
+                            <form className="myForm" onSubmit={this.handleSubmit} noValidate >
 
-                    <p className="text">You agree to the website User Agreement, Privacy policy and Cookie policy</p>
+                                <label htmlFor="user">First name<input type="text" id="user" name="username" value={this.state.username} onChange={this.handleChange} />
+                                    {/* checking fields if are correct or not */}
+                                    {this.state.errors.username && <span>{this.messages.username_incorrect}</span>}
+                                </label>
+
+                                <label htmlFor="lastname">Last name<input type="text" id="lastname" name="lastname" value={this.state.lastname} onChange={this.handleChange} />
+                                    {this.state.errors.lastname && <span>{this.messages.lastname_incorrect}</span>}
+                                </label>
 
 
-                    <button>AGREE & JOIN</button>
-                    <p className="sign-in-link">Already on this page? <Link to="/"> Sign in</Link></p>
+                                <label htmlFor="email">Email<input type="email" id="email" name="email" value={this.state.email} onChange={this.handleChange} />
+                                    {this.state.errors.email && <span>{this.messages.email_incorrect}</span>}
+                                </label>
 
-                </form>
-                {this.state.message && <h3 class="statement">{this.state.message}</h3>}
+                                <label htmlFor="password">Password<input type="password" id="password" name="pass" value={this.state.pass} onChange={this.handleChange} />
+                                    {this.state.errors.pass && <span>{this.messages.password}</span>}
+
+
+                                </label>
+
+                                <p className="text">You agree to the website User Agreement, Privacy policy and Cookie policy</p>
+
+
+                                <button>AGREE & JOIN</button>
+
+
+                            </form>
+                            {this.state.message && <h3 class="statement">{this.state.message}</h3>}
+                        </div>
+
+                    </div>
+                </div>
             </div>
+
+
+
+
         );
     }
 }
+
+
 
 
 
