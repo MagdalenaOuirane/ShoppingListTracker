@@ -8,6 +8,7 @@ body {
 #signupbox {
 margin-top:50px;
   border:1px solid lightskyblue;
+
   
 }
 
@@ -34,6 +35,8 @@ margin-top:50px;
     
     label {
       text-align:left;
+      margin-bottom:5px;
+
       
     }
     
@@ -61,7 +64,8 @@ margin-top:50px;
      span {
       font-size: 15px;
       color:red;
-      margin-left:2px;
+     
+     
     }
     
     .text {
