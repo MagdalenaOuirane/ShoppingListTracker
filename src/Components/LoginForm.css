@@ -29,7 +29,7 @@ width:400px;
 }
 
 .input-group {
-  margin-bottom:30px;
+  margin-bottom:20px;
   width:100%;
 }
 
@@ -44,10 +44,17 @@ width:400px;
 
 }
 
+input[type="email"],
+input[type="password"] {
+margin-bottom:30px;
+width:100%;
 
- .input-group {
-   width:100%;
- }
+}
+
+
+label {
+  width:100%;
+}
 
  .input-group label {
    text-align: left;
